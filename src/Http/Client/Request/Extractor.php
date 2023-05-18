@@ -33,7 +33,7 @@ class Extractor
     {
         $endpoint = UrlBuilder::execute($method, $url, $payload);
         $arrayQueryString = UrlExtractor::extractQueryStringFromUrl($url);
-        $payload = array_unique(array_merge($payload, $arrayQueryString));
+        $payload = array_unique(array_merge($arrayQueryString, $payload));
         $encodedPayload = PayloadBuilder::execute($method, $url, $payload);
 
         return [$endpoint, $encodedPayload];
