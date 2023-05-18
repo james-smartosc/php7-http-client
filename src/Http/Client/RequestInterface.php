@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Http\Client;
 
 /**
- * @interface RequestInterface
+ * Interface RequestInterface.
  */
 interface RequestInterface extends MessageInterface
 {

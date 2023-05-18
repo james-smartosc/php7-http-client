@@ -9,8 +9,10 @@ use Http\Client\RequestInterface;
 use Http\Client\Response\Builder as ResponseBuilder;
 use Http\Client\Response\Validator as ResponseValidator;
 use Http\Client\ResponseInterface;
-use Http\Exception\HttpRequestException;
 
+/**
+ * Class Client.
+ */
 class Client implements ClientInterface
 {
     /**
@@ -28,7 +30,7 @@ class Client implements ClientInterface
      */
     public static function head(string $url, array $query = [], array $headers = []): ResponseInterface
     {
-        $request = RequestBuilder::execute(RequestInterface::HTTP_METHOD_GET, $url, $query, $headers);
+        $request = RequestBuilder::execute(RequestInterface::HTTP_METHOD_HEAD, $url, $query, $headers);
 
         return static::sendRequest($request);
     }

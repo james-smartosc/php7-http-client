@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Http\Client\Request;
 
 use Http\Client\Request;
-use Http\Client\RequestInterface;
 use Http\Client\Request\Extractor as RequestExtractor;
 use Http\Client\Request\Resolver as RequestResolver;
+use Http\Client\RequestInterface;
 
 /**
  * Class Builder

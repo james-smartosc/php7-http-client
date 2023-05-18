@@ -8,7 +8,6 @@ use Http\Client\MessageInterface;
 use Http\Client\ResponseInterface;
 use Http\Exception\HttpResponseException;
 use InvalidArgumentException;
-use JsonException;
 
 /**
  * Class Validator.
@@ -19,6 +18,7 @@ class Validator
 {
     /**
      * @param int $statusCode
+     *
      * @throws InvalidArgumentException If status code not in correct range.
      */
     public static function validateStatusCode(int $statusCode): void
@@ -30,6 +30,7 @@ class Validator
 
     /**
      * @param array $headers
+     *
      * @throws InvalidArgumentException If HTTP response does not contain status code.
      */
     public static function validateHeaders(array $headers): void
@@ -45,6 +46,7 @@ class Validator
 
     /**
      * @param ResponseInterface $response
+     *
      * @throws HttpResponseException If HTTP response status code is 4xx or 5xx.
      */
     public static function validateResponse(ResponseInterface $response): void

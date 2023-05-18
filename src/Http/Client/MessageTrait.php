@@ -24,7 +24,7 @@ trait MessageTrait
     /**
      * @var string
      */
-    private string $protocolVersion = '1.1';
+    private string $protocolVersion = MessageInterface::HTTP_PROTOCOL_VERSION_1_1;
 
     /**
      * {@inheritdoc}

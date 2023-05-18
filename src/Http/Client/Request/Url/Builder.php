@@ -19,7 +19,7 @@ use InvalidArgumentException;
 class Builder implements RequestDataBuilderInterface
 {
     /**
-     * Build endpoint URL and URL query string based on HTTP method.
+     * Build endpoint URL based on HTTP method.
      *
      * {@inheritdoc}
      *
