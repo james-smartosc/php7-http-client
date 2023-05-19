@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Http;
 
 use Http\Client\Request\Builder as RequestBuilder;
+use Http\Client\Request\Validator as RequestValidator;
 use Http\Client\RequestInterface;
 use Http\Client\Response\Builder as ResponseBuilder;
 use Http\Client\Response\Validator as ResponseValidator;
@@ -90,6 +91,7 @@ class Client implements ClientInterface
      */
     public static function sendRequest(RequestInterface $request): ResponseInterface
     {
+        RequestValidator::validateRequest($request);
         $context = stream_context_create($request->getStreamContextOptions());
         $resultBody = file_get_contents($request->getUrl(), false, $context);
 

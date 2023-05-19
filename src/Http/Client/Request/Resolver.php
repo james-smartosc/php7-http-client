@@ -39,7 +39,7 @@ class Resolver
             );
         }
 
-        $request->setHeader(MessageInterface::HEADER_CONTENT_LENGTH_KEY, (string)strlen($request->getBody()));
+        $request->setHeader(MessageInterface::HEADER_CONTENT_LENGTH_KEY, (string) strlen($request->getBody()));
 
         return $request;
     }
@@ -66,7 +66,8 @@ class Resolver
                     $headers
                 ),
                 RequestBuilderInterface::STREAM_CONTEXT_HTTP_CONTENT_KEY => $request->getBody(),
-                MessageInterface::HTTP_PROTOCOL_VERSION_KEY => $request->getProtocolVersion()
+                MessageInterface::HTTP_PROTOCOL_VERSION_KEY => $request->getProtocolVersion(),
+                RequestBuilderInterface::STREAM_CONTEXT_HTTP_IGNORE_ERRORS_KEY => true
             ]
         ];
 

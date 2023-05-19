@@ -23,7 +23,7 @@ interface ClientInterface
      * @return ResponseInterface
      *
      * @throws InvalidArgumentException When status code not in range or headers not contains required HTTP response data.
-     * @throws HttpExceptionInterface When response fails on validation.
+     * @throws HttpExceptionInterface When request and response fails on validation.
      */
     public static function get(string $url, array $query = [], array $headers = []): ResponseInterface;
 
@@ -35,7 +35,7 @@ interface ClientInterface
      * @return ResponseInterface
      *
      * @throws InvalidArgumentException When status code not in range or headers not contains required HTTP response data.
-     * @throws HttpExceptionInterface When response fails on validation.
+     * @throws HttpExceptionInterface When request and response fails on validation.
      */
     public static function head(string $url, array $query = [], array $headers = []): ResponseInterface;
 
@@ -48,7 +48,7 @@ interface ClientInterface
      *
      * @throws InvalidArgumentException When status code not in range or headers not contains required HTTP response data.
      * @throws JsonException When payload JSON decoded fails.
-     * @throws HttpExceptionInterface When response fails on validation.
+     * @throws HttpExceptionInterface When request and response fails on validation.
      */
     public static function post(string $url, array $payload = [], array $headers = []): ResponseInterface;
 
@@ -61,7 +61,7 @@ interface ClientInterface
      *
      * @throws InvalidArgumentException When status code not in range or headers not contains required HTTP response data.
      * @throws JsonException When payload JSON decoded fails.
-     * @throws HttpExceptionInterface When response fails on validation.
+     * @throws HttpExceptionInterface When request and response fails on validation.
      */
     public static function put(string $url, array $payload = [], array $headers = []): ResponseInterface;
 
@@ -74,7 +74,7 @@ interface ClientInterface
      *
      * @throws InvalidArgumentException When status code not in range or headers not contains required HTTP response data.
      * @throws JsonException When payload JSON decoded fails.
-     * @throws HttpExceptionInterface When response fails on validation.
+     * @throws HttpExceptionInterface When request and response fails on validation.
      */
     public static function patch(string $url, array $payload = [], array $headers = []): ResponseInterface;
 
@@ -98,7 +98,7 @@ interface ClientInterface
      * @return ResponseInterface
      *
      * @throws InvalidArgumentException When status code not in range or headers not contains required HTTP response data.
-     * @throws HttpExceptionInterface When response fails on validation.
+     * @throws HttpExceptionInterface When request and response fails on validation.
      */
     public static function options(string $url, array $query = [], array $headers = []): ResponseInterface;
 
@@ -108,7 +108,7 @@ interface ClientInterface
      * @return ResponseInterface
      *
      * @throws InvalidArgumentException When status code not in range or headers not contains required HTTP response data.
-     * @throws HttpExceptionInterface When response fails on validation.
+     * @throws HttpExceptionInterface When request and response fails on validation.
      */
     public static function sendRequest(RequestInterface $request): ResponseInterface;
 }

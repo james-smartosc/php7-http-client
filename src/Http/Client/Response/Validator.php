@@ -53,7 +53,7 @@ class Validator
     {
         $statusCode = (string) $response->getStatusCode();
 
-        if (strpos($statusCode, '4') || strpos($statusCode, '5')) {
+        if (strpos($statusCode, '4') === 0 || strpos($statusCode, '5') === 0) {
             throw new HttpResponseException(
                 $response,
                 sprintf(

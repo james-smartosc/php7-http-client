@@ -144,8 +144,8 @@ class Response implements ResponseInterface
     public function getBodyAsArray(): array
     {
         if (strpos(
-            MessageInterface::HEADER_APPLICATION_JSON,
-            $this->getHeader(MessageInterface::HEADER_CONTENT_TYPE_KEY)
+            $this->getHeader(MessageInterface::HEADER_CONTENT_TYPE_KEY),
+            MessageInterface::HEADER_APPLICATION_JSON
         ) === false) {
            throw new MethodNotSupportedException(
                'Can not parsed response body to JSON decoded because response was not expected JSON body.'

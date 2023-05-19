@@ -57,6 +57,6 @@ class Builder implements RequestDataBuilderInterface
     {
         $payload = array_unique(array_merge($arrayQueryString, $payload));
 
-        return urldecode(http_build_query($payload));
+        return http_build_query($payload);
     }
 }

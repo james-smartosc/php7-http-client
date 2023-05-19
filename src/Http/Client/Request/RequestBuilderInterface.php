@@ -17,6 +17,7 @@ interface RequestBuilderInterface
     public const STREAM_CONTEXT_HTTP_METHOD_KEY = 'method';
     public const STREAM_CONTEXT_HTTP_HEADER_KEY = 'header';
     public const STREAM_CONTEXT_HTTP_CONTENT_KEY = 'content';
+    public const STREAM_CONTEXT_HTTP_IGNORE_ERRORS_KEY = 'ignore_errors';
     public const STREAM_CONTEXT_HEADER_DELIMITER = "\r\n";
 
     /**
